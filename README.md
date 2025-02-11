@@ -1,0 +1,1 @@
+# Simple boilerplate for a hello world Chrome Extension w/React
