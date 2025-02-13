@@ -1,0 +1,129 @@
+/* Base styles for the chat window */
+.chat-window {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f2f2f2; /* Light background by default */
+}
+
+/* Chat Header */
+.chat-header {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+  background-color: #0078d4;
+  color: #fff;
+}
+
+/* Message List */
+.chat-message-list {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  background-color: #f2f2f2;
+}
+
+/* Individual message */
+.chat-message {
+  display: flex;
+  margin: 5px 0;
+}
+
+.chat-message.user {
+  justify-content: flex-end;
+}
+
+.chat-message.bot {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  max-width: 70%;
+  background-color: #fff;
+  color: #000;
+}
+
+.chat-message.user .message-bubble {
+  background-color: #DCF8C6;
+}
+
+/* Chat Input */
+.chat-input {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  background-color: inherit;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.chat-input button {
+  margin-left: 8px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  background-color: #0078d4;
+  color: #fff;
+}
+
+/* Dark theme overrides */
+@media (prefers-color-scheme: dark) {
+  /* Chat Window */
+  .chat-window {
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+  }
+
+  /* Chat Header */
+  .chat-header {
+    background-color: #005a9e;
+  }
+
+  /* Message List */
+  .chat-message-list {
+    background-color: #1e1e1e;
+  }
+
+  /* Default message bubble in dark mode */
+  .message-bubble {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+  }
+
+  /* User bubble override */
+  .chat-message.user .message-bubble {
+    background-color: #0b6a4a; /* or #333 if you want them all the same */
+  }
+
+  /* Chat Input */
+  .chat-input {
+    background-color: #1e1e1e;
+    border-top: 1px solid #444;
+  }
+
+  /* Darken the text input */
+  .chat-input input {
+    background-color: #333;
+    color: #fff;
+    border-color: #555;
+  }
+
+  /* Darken the send button */
+  .chat-input button {
+    background-color: #444;
+    color: #fff;
+  }
+}
